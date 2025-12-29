@@ -1,0 +1,49 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.log
+
+# --- Virtual environment ---
+venv/
+.env/
+.venv/
+ENV/
+env/
+*/venv/
+*/.venv/
+
+# --- PyCharm ---
+.idea/
+*.iml
+
+# --- Byte-compiled / temporary files ---
+*.pyo
+*.tmp
+*.temp
+*.bak
+
+# --- OS-specific ---
+.DS_Store
+Thumbs.db
+
+# --- Jupyter (jeśli kiedyś użyjesz notebooków) ---
+.ipynb_checkpoints/
+
+# --- pytest / coverage ---
+.coverage
+htmlcov/
+.cache/
+coverage.xml
+
+# --- mypy / pyright ---
+.mypy_cache/
+.pyright/
+
+# --- data files
+*.csv
