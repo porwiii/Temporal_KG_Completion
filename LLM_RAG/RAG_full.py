@@ -48,12 +48,12 @@ llm = AutoModelForCausalLM.from_pretrained(
 llm.eval()
 
 
-qid_to_label = json.load(open("qid_to_label.json"))
-pid_to_label = json.load(open("pid_to_label.json"))
-norm_label_to_qids = json.load(open("norm_label_to_qids.json"))
+qid_to_label = json.load(open("../qid_to_label.json"))
+pid_to_label = json.load(open("../pid_to_label.json"))
+norm_label_to_qids = json.load(open("../norm_label_to_qids.json"))
 
 # load and split dataset
-df = pd.read_csv("tkgl-smallpedia_edgelist.csv") 
+df = pd.read_csv("../tkgl-smallpedia_edgelist.csv")
 df["ts"] = df["ts"].astype(int)
 
 train_df = df[df["ts"] < 2008].copy()
