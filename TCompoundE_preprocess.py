@@ -12,8 +12,8 @@ import pandas as pd
 
 CSV_PATH = "tkgl-smallpedia_edgelist.csv"
 
-DATA_PATH = Path("data")
-DATASET_NAME = "SMALLPEDIA"
+DATA_PATH = Path("data_full")
+DATASET_NAME = "SMALLPEDIA_FULL"
 OUT_DIR = DATA_PATH / DATASET_NAME
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -89,8 +89,8 @@ for h, _, t, _ in train:
 def filter_by_train_entities(data):
     return [q for q in data if q[0] in train_entities and q[2] in train_entities]
 
-valid = filter_by_train_entities(valid)
-test  = filter_by_train_entities(test)
+#valid = filter_by_train_entities(valid)
+#test  = filter_by_train_entities(test)
 
 
 print(f"Train: {len(train)} | Valid: {len(valid)} | Test: {len(test)}")
